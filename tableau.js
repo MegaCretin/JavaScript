@@ -57,3 +57,6 @@ function extraireNomPrenom(phrase){
 }
 
 extraireNomPrenom(phraseNomPrenom);
+
+let arrayHabitants = [38000000, 67000000];
+ // Exercice SUR les habitants
