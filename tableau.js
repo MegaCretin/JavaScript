@@ -58,5 +58,50 @@ function extraireNomPrenom(phrase){
 
 extraireNomPrenom(phraseNomPrenom);
 
-let arrayHabitants = [38000000, 67000000];
- // Exercice SUR les habitants
+let arrayHabitants = [38000000, 67000000, 444000, 4059000, 1448471000, 7481000, 46719000, 1275000, 40000, 334805000];
+
+function calculTotal(tableau){
+    let total = 0;
+    tableau.forEach(element => {
+        total = total + element;
+    });
+    console.log("Le nombre total d'habitant: " + total);
+}
+
+calculTotal(arrayHabitants);
+
+function calculMoyenne(tableau) {
+    let total = 0;
+    tableau.forEach(element => {
+        total = total + element;
+    });
+    let moyenne = total / tableau.length;
+    console.log("Le nombre moyenne d'habitant: " + moyenne);
+}
+
+calculMoyenne(arrayHabitants);
+
+function calculHabitantSup(nombre, tableau) {
+    let total = 0;
+    tableau.forEach(element => {
+        if(element >= nombre){
+            total++;
+        }
+    });
+    console.log("Nombre de pays avec plus de " + nombre + " d'habitants: " + total);
+}
+
+calculHabitantSup(10000000, arrayHabitants);
+
+let arrayFilm = ["Harry Potter", "Star Wars", "Hobbit", "Matrix 4", "Seigneur des anneaux", "Grease", "Tron", "Charlie et la chocolaterie", "Spirit"];
+
+function findIndex(tableau, string){
+    for(i in tableau){
+        if(tableau[i] == string){
+            let position = parseInt(i) + 1;
+            console.log("Le film se trouve a la position " + position + " du tableau et index " + i);
+        }
+    }
+}
+
+findIndex(arrayFilm, "Matrix 4");
